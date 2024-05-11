@@ -41,14 +41,10 @@ class ClerkAuthMiddleware:
                 raise AuthenticationFailed('Invalid authentication token')
         else:
             raise AuthenticationFailed('Invalid authentication token')
-        
-        print(user_id)
-        
-        res = clerk_client.users.getUser(user_id=user_id)
-        print(res.json())
 
         user['is_authenticated'] = True
         user['id'] = user_id
+        user['decoded_token'] = decoded_token
 
         if not user:
             raise AuthenticationFailed('Invalid authentication token')

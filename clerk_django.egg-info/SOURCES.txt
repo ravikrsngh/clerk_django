@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+clerk_django/__init__.py
+clerk_django/client.py
+clerk_django.egg-info/PKG-INFO
+clerk_django.egg-info/SOURCES.txt
+clerk_django.egg-info/dependency_links.txt
+clerk_django.egg-info/requires.txt
+clerk_django.egg-info/top_level.txt
+clerk_django/middlewares/__init__.py
+clerk_django/middlewares/clerk.py
+clerk_django/permissions/__init__.py
+clerk_django/permissions/clerk.py
+clerk_django/resources/__init__.py
+clerk_django/resources/user.py
