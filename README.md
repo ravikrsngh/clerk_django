@@ -65,7 +65,7 @@ user_list = cc.users.getUserList({
             })
 ```
 
-I have added all the functions mentioned in the [Clerk Backend SDK - User](https://clerk.com/docs/references/backend/user/get-user-list). You just need to use `user_id` instead of `userId`. Also in case of `verifyPassword`, just pass the `user_id` and `password` directly.
+I have added all the functions mentioned in the [Clerk Backend SDK - User](https://clerk.com/docs/references/backend/user/get-user-list). You just need to use `user_id` instead of `userId`. Also in case of `verifyPassword`, just pass the `user_id` and `password` directly. In all the other functions you can pass the params as required and mentioned in the documentation.
 
 ```python
 res = cc.users.verifyPassword(user_id,password)
