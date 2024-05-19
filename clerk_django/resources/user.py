@@ -20,8 +20,8 @@ class UserResource:
     def getUserOauthAccessToken(self, user_id, provider):
         return self._client.get(f'{self.base_url}/{user_id}/oauth_access_tokens/{provider}')
     
-    def createUser(self, data={}):
-        return self._client.post(f'{self.base_url}', data=data)
+    def createUser(self, params={}):
+        return self._client.post(f'{self.base_url}', data=params)
     
     def verifyPassword(self, user_id, password):
         return self._client.post(f'{self.base_url}/{user_id}/verify_password', data={"password":password})
@@ -35,14 +35,14 @@ class UserResource:
     def lockUser(self, user_id):
         return self._client.post(f'{self.base_url}/{user_id}/lock')
     
-    def lockUser(self, user_id):
+    def unlockUser(self, user_id):
         return self._client.post(f'{self.base_url}/{user_id}/unlock')
     
-    def updateUser(self, data={}):
-        return self._client.patch(f'{self.base_url}', data=data)
+    def updateUser(self, params={}):
+        return self._client.patch(f'{self.base_url}', data=params)
     
-    def updateUserMetadata(self,user_id, data={}):
-        return self._client.patch(f'{self.base_url}/{user_id}/metadata', data=data)
+    def updateUserMetadata(self,user_id, params={}):
+        return self._client.patch(f'{self.base_url}/{user_id}/metadata', data=params)
     
     def deleteUser(self, user_id):
         return self._client.delete(f'{self.base_url}/{user_id}')
